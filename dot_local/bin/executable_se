@@ -1,0 +1,9 @@
+#!/bin/bash
+
+_file="$(fzf)"
+
+if [ -n "$_file" ]; then
+    nvim -- "$_file"
+else
+    true
+fi
