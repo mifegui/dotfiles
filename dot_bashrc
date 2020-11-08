@@ -85,7 +85,7 @@ export EDITOR=nvim
 export GOPATH=~/go
 export PATH=$GOPATH/bin:$PATH
 export PATH=~/.local/bin:$PATH
-export PS1="\[\033[38;5;14m\]\W\[$(tput sgr0)\] \[$(tput sgr0)\]\[\033[38;5;9m\]>\[$(tput sgr0)\] \[$(tput sgr0)\]"
+export PS1="\[\033[38;5;14m\]\W\[$(tput sgr0)\] \[$(tput sgr0)\]\[\033[38;5;9m\]❯\[$(tput sgr0)\] \[$(tput sgr0)\]"
 export LC=/mnt/d/Livro_Comum
 
 alias tn="tmux -u new"
@@ -97,7 +97,6 @@ alias v='nvim'
 
 set -o vi
 
-#eval "$(starship init bash)" # starship
 eval "$(luajit ~/.local/bin/z.lua --init bash fzf)" # z.lua
 source /usr/share/doc/fzf/examples/key-bindings.bash # Fzf
 source /usr/share/doc/fzf/examples/completion.bash # Fzf
