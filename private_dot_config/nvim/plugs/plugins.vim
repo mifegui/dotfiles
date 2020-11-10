@@ -1,12 +1,4 @@
 
-" Instalar automaticamente o Plug
-if empty(glob('~/.config/nvim/autoload/plug.vim'))
-  silent !curl -fLo ~/.nvim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-endif
-
-
 call plug#begin(stdpath('data') . '/plugged')       " Iniciar vim-plug, gerenciador de plugins
 Plug 'vimwiki/vimwiki', { 'branch': 'dev' }         " Vimwiki - Uma wiki para vim
 
