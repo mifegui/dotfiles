@@ -97,7 +97,7 @@ alias v='nvim'
 
 set -o vi
 
-eval "$(luajit ~/.local/bin/z.lua --init bash fzf)" # z.lua
+eval "$(zoxide init bash)" # Zoxide
 source /usr/share/doc/fzf/examples/key-bindings.bash # Fzf
 source /usr/share/doc/fzf/examples/completion.bash # Fzf
 
