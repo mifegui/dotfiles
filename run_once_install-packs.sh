@@ -9,6 +9,9 @@ sudo apt install -y \
     npm \
     ripgrep 
 
+# wsl-open
+sudo npm install -g wsl-open
+
 # bat
 apt install -o Dpkg::Options::="--force-overwrite" bat ripgrep
 ln -s /usr/bin/batcat ~/.local/bin/bat
