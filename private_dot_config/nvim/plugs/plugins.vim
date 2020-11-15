@@ -5,6 +5,7 @@ Plug 'vimwiki/vimwiki', { 'branch': 'dev' }         " Vimwiki - Uma wiki para vi
 Plug 'junegunn/goyo.vim'                            " Tela centralizada
 Plug 'vim-airline/vim-airline'                      " Stausline melhor
 Plug 'joshdick/onedark.vim'                         " Colorscheme
+Plug 'sheerun/vim-polyglot'                         " Sintaxe
 
 Plug 'farmergreg/vim-lastplace'                     " Vim-lastplace - Abrir arquivo de onde parou
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } " FZF - FuzZy file Finder
