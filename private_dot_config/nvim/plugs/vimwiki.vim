@@ -60,6 +60,9 @@ nmap <Leader>N <Plug>VimwikiPrevLink
 command! CDirWiki execute ":cd ".expand(vimwiki_list[0].path)
 nmap <leader>cC :CDirWiki<cr>:pwd<cr>
 
+nmap <leader>Rd :CDirWiki<cr>:read Sobre/modelos/diur.md<cr>
+nmap <leader>Rn :CDirWiki<cr>:read Sobre/modelos/notur.md<cr>
+
 " | Auxiliares |
 
 " Manejar os links de forma a permitir acessar quaisquer arquivos de qualquer
@@ -68,9 +71,11 @@ nmap <leader>cC :CDirWiki<cr>:pwd<cr>
 " Usa: Fd para achar o arquivo
 function! VimwikiLinkHandler(link)
   try
-    let result = system('fdfind -F -e .md '.
-          \ shellescape(a:link)." ".
-          \ shellescape(expand(g:vimwiki_list[0].path)))
+    let result = system('caminho.lua ' .
+        \ shellescape(a:link))
+    "let result = system('fd -F -e .md '.
+    "      \ shellescape(a:link)." ".
+    "      \ shellescape(expand(g:vimwiki_list[0].path)))
     if !len(l:result)
       return 0
     endif
@@ -103,10 +108,11 @@ endfunction
 command! -nargs=* PasteLink call PasteWikiLink(<q-args>)
 
 function! GenerateLinksCurrent()
-  let l:path=expand('%:p:h')
+  let l:path=expand('%:p')
   let l:path=substitute(path,expand(g:vimwiki_list[0].path),"","")
   let l:path=substitute(path,"/","","")
-  exec "VimwikiGenerateLinks " . path . "/*.md"
+  let l:path=substitute(path,".md","","")
+  exec "VimwikiGenerateLinks " "/" . path . "/*.md"
 endfunction
 command! GenerateLinks call GenerateLinksCurrent()
 

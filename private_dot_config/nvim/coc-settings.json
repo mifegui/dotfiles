@@ -1,6 +1,10 @@
 {
-    "python.jediEnabled": true
-
+    "python.jediEnabled": true,
+    "coc.preferences.extensionUpdateCheck": "never",
+    "Lua.workspace.library": {
+        "/usr/share/lua/5.4": true,
+        "lib/lua/5.4": true
+    }
 
 
 }

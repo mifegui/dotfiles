@@ -8,3 +8,5 @@ colorscheme onedark
 let g:onedark_termcolors=256
 
 highlight Comment cterm=italic
+
+let ayucolor="light"

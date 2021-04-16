@@ -36,6 +36,8 @@ map <leader>cd :cd %:p:h<cr>:pwd<cr>
 " Editar init.vim apertando leader e
 map <leader>e :e! ~/.config/nvim/init.vim<cr>
 
+vmap <leader>y "+y
+
 " Habilitar e desabilitar spell checking com leader s
 nmap <silent><leader>s :set spell!<cr>
 
@@ -47,3 +49,9 @@ nmap <leader>D :BufOnly<cr>
 
 " Mostrar trailing espaços e tabs e ademais
 nnoremap <silent><leader>\| :set list!<cr>
+
+nmap <leader>Oo :Open %<cr>
+nmap <leader>Op :Open %:p:h<cr>
+
+nmap <leader>tp :TafProj<cr>
+

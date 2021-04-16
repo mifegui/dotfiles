@@ -42,8 +42,6 @@ endif
 
 " Make <CR> auto-select the first completion item and notify coc.nvim to
 " format on enter, <cr> could be remapped by other vim plugin
-inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
-                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 " Use `[g` and `]g` to navigate diagnostics
 " Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
@@ -136,21 +134,21 @@ set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
 " Mappings for CoCList
 " Show all diagnostics.
-nnoremap <silent><nowait> ,a  :<C-u>CocList diagnostics<cr>
+nnoremap <silent><nowait> \a  :<C-u>CocList diagnostics<cr>
 " Manage extensions.
-nnoremap <silent><nowait> ,e  :<C-u>CocList extensions<cr>
+nnoremap <silent><nowait> \e  :<C-u>CocList extensions<cr>
 " Show commands.
-nnoremap <silent><nowait> ,c  :<C-u>CocList commands<cr>
-" Find symbol of current d,.
-nnoremap <silent><nowait> ,o  :<C-u>CocList outline<cr>
-" Search workspace symbols,
-nnoremap <silent><nowait> ,s  :<C-u>CocList -I symbols<cr>
-" Do default action for ne,.
-nnoremap <silent><nowait> ,j  :<C-u>CocNext<CR>
-" Do default action for pr,item.
-nnoremap <silent><nowait> ,k  :<C-u>CocPrev<CR>
+nnoremap <silent><nowait> \c  :<C-u>CocList commands<cr>
+" Find symbol of current d\.
+nnoremap <silent><nowait> \o  :<C-u>CocList outline<cr>
+" Search workspace symbols\
+nnoremap <silent><nowait> \s  :<C-u>CocList -I symbols<cr>
+" Do default action for ne\.
+nnoremap <silent><nowait> \j  :<C-u>CocNext<CR>
+" Do default action for pr\item.
+nnoremap <silent><nowait> \k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
-nnoremap <silent><nowait> ,p  :<C-u>CocListResume<CR>
+nnoremap <silent><nowait> \p  :<C-u>CocListResume<CR>
 " Explorer
 nnoremap <silent><nowait> <leader>F  :<C-u>CocCommand explorer<CR>
 
